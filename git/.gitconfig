@@ -6,7 +6,7 @@
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore-global
 	editor = vim
 [color]
 	ui = true
