@@ -19,3 +19,5 @@
 	ss = status -s
 [commit]
 	gpgsign = true
+[rebase]
+	autosquash = true
