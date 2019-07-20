@@ -1,0 +1,120 @@
+# i3blocks config file
+
+# Global properties
+command=/run/current-system/sw/libexec/i3blocks/$BLOCK_NAME
+#command=~/.config/i3blocks/i3scripts/$BLOCK_NAME
+align=center
+separator=false
+separator_block_width=10
+markup=pango
+border_top=0
+border_right=0
+border_left=0
+border_bottom=1
+
+# Blocks
+
+# Display current song
+#[mediaplayer]
+#instance=cmus-remote
+#interval=5
+#signal=10
+#color=#F3F4F5
+#border=#F3F4F5
+
+# OpenVPN
+[openvpn]
+command=~/.config/i3blocks/i3scripts/$BLOCK_NAME
+label=
+interval=5
+color=#F3F4F5
+border=#F3F4F5
+
+# Free space of /home/
+#[home]
+#command=printf "\\uf015 " && ~/.i3/i3scripts/disk
+#instance=/home/
+#interval=3600
+#color=#4ec2f7
+#border=#4ec2f7
+
+# Free space of /
+[disk]
+label=
+instance=/
+interval=60
+color=#F3F4F5
+border=#F3F4F5
+
+[bandwidth]
+#command=/run/current-system/sw/libexec/i3blocks/bandwidth | awk -F " " '{if($1!="down")printf "%s %4s %s %4s",$1,$2,$3,$4;else print ""}' 
+interval=1
+color=#F3F4F5
+border=#F3F4F5
+
+# CPU usage
+[cpu_usage]
+label=
+interval=2
+color=#F3F4F5
+border=#F3F4F5
+
+# Temperature
+#[temperature]
+#command=~/.config/i3blocks/i3scripts/$BLOCK_NAME
+#interval=2
+#color=#F3F4F5
+#border=#F3F4F5
+
+# Free RAM
+[memory]
+label=
+interval=2
+color=#F3F4F5
+border=#F3F4F5
+
+# Volume
+[volume]
+label=
+interval=1
+color=#F3F4F5
+border=#F3F4F5
+
+# Battery
+[battery]
+label=
+interval=5
+border=#F3F4F5
+
+# WiFi connection
+[wifi]
+label=
+instance=wlp8s0
+color=#F3F4F5
+border=#F3F4F5
+interval=5
+
+# Ethernet connection
+[eth]
+label=
+instance=enp32s0
+color=#F3F4F5
+border=#F3F4F5
+interval=5
+
+# Time
+[time]
+command=date '+%H:%M' 
+label=
+interval=5
+color=#F3F4F5
+border=#F3F4F5
+
+# Date
+[date]
+command=date '+%a %e %b %Y'
+label=
+interval=60
+color=#F3F4F5
+border=#F3F4F5
+
