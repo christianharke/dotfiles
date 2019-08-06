@@ -1,0 +1,12 @@
+URxvt.saveLines: 10000
+URxvt.scrollBar: false
+URxvt.inheritPixmap: true
+URxvt.shading: 40
+URxvt.foreground: white
+URxvt.background: black
+URxvt.secondaryScroll: true
+URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=12
+URxvt.perl-ext-common: eval,mark-urls
+URxvt.urlLauncher: firefox
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
