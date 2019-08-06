@@ -42,6 +42,7 @@ interval=2
 
 # Free RAM
 [memory]
+command=~/.config/i3blocks/i3scripts/memory
 label=
 interval=2
 
