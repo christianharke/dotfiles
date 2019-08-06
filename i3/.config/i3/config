@@ -201,6 +201,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # finds out, if available)
 bar {
         status_command i3blocks
+        position top
         font pango:SauceCodePro Nerd Font Black 9
         #colors {
         #                            # Border  # Background  # Text
