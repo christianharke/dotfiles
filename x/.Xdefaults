@@ -5,7 +5,7 @@ URxvt.shading: 40
 URxvt.foreground: white
 URxvt.background: black
 URxvt.secondaryScroll: true
-URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=12
+URxvt.font: xft:BitstreamVeraSansMono Nerd Font Mono:pixelsize=12
 URxvt.perl-ext-common: eval,mark-urls
 URxvt.urlLauncher: firefox
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
