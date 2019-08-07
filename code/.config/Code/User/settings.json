@@ -1,0 +1,6 @@
+{
+    "telemetry.enableTelemetry": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "window.menuBarVisibility": "toggle",
+    "editor.fontFamily": "'DroidSansMono Nerd Font Mono', 'monospace', monospace, 'Droid Sans Fallback'"
+}
