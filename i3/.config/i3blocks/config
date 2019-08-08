@@ -16,28 +16,17 @@ border=#F3F4F5
 # Blocks
 
 # Display current song
-#[mediaplayer]
-#instance=cmus-remote
-#interval=5
-#signal=10
-
-# Free space of /home/
-#[home]
-#command=printf "\\uf015 " && ~/.i3/i3scripts/disk
-#instance=/home/
-#interval=3600
-#color=#4ec2f7
-#border=#4ec2f7
+[mediaplayer]
+command=~/.config/i3blocks/blocklets/mediaplayer
+label=
+instance=spotify
+interval=5
+signal=10
 
 # CPU usage
 [cpu_usage]
 label=
 interval=2
-
-# Temperature
-#[temperature]
-#command=~/.config/i3blocks/i3scripts/$BLOCK_NAME
-#interval=2
 
 # Free RAM
 [memory]
@@ -51,9 +40,10 @@ label=
 instance=/
 interval=60
 
-[bandwidth]
-#command=/run/current-system/sw/libexec/i3blocks/bandwidth | awk -F " " '{if($1!="down")printf "%s %4s %s %4s",$1,$2,$3,$4;else print ""}' 
-interval=1
+# Temperature
+[temperature]
+command=~/.config/i3blocks/blocklets/$BLOCK_NAME
+interval=2
 
 # WiFi connection
 [wifi]
