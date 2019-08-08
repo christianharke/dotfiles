@@ -2,7 +2,6 @@
 
 # Global properties
 command=/run/current-system/sw/libexec/i3blocks/$BLOCK_NAME
-#command=~/.config/i3blocks/i3scripts/$BLOCK_NAME
 align=center
 separator=false
 separator_block_width=10
@@ -32,7 +31,7 @@ border=#F3F4F5
 
 # CPU usage
 [cpu_usage]
-label=
+label=
 interval=2
 
 # Temperature
@@ -42,8 +41,8 @@ interval=2
 
 # Free RAM
 [memory]
-command=~/.config/i3blocks/i3scripts/memory
-label=
+command=~/.config/i3blocks/blocklets/memory
+label=
 interval=2
 
 # Free space of /
@@ -70,7 +69,7 @@ interval=5
 
 # OpenVPN
 [openvpn]
-command=~/.config/i3blocks/i3scripts/$BLOCK_NAME
+command=~/.config/i3blocks/blocklets/$BLOCK_NAME
 label=
 interval=5
 
