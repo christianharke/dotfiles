@@ -6,10 +6,8 @@ URxvt.foreground: white
 URxvt.background: black
 URxvt.secondaryScroll: true
 URxvt.font: xft:BitstreamVeraSansMono Nerd Font Mono:pixelsize=12
-URxvt.perl-ext-common: eval,mark-urls
+URxvt.perl-ext-common: mark-urls
 URxvt.urlLauncher: firefox
-URxvt.keysym.Shift-Control-V: eval:paste_clipboard
-URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 
 !! Cursor word movement
 URxvt*altSendsEscape: true
