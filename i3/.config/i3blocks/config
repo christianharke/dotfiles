@@ -1,7 +1,7 @@
 # i3blocks config file
 
 # Global properties
-command=/run/current-system/sw/libexec/i3blocks/$BLOCK_NAME
+command=~/.config/i3blocks/blocklets/$BLOCK_NAME
 align=center
 separator=false
 separator_block_width=10
@@ -17,70 +17,68 @@ border=#F3F4F5
 
 # Display current song
 [mediaplayer]
-command=~/.config/i3blocks/blocklets/mediaplayer
-label=
+label= 
 instance=spotify
 interval=5
 signal=10
 
 # CPU usage
 [cpu_usage]
-label=
+label= 
 interval=2
 
 # Free RAM
 [memory]
-command=~/.config/i3blocks/blocklets/memory
-label=
+label= 
 interval=2
 
 # Free space of /
 [disk]
-label=
+label= 
 instance=/
 interval=60
 
 # Temperature
 [temperature]
-command=~/.config/i3blocks/blocklets/$BLOCK_NAME
+label= 
+SENSOR_CHIP=dell_smm-virtual-0
 interval=2
 
 # WiFi connection
 [wifi]
-label=
+label= 
 instance=wlp8s0
 interval=5
 
 # Ethernet connection
-[eth]
-label=
+[iface]
+label= 
 instance=enp32s0
 interval=5
 
 # OpenVPN
 [openvpn]
-command=~/.config/i3blocks/blocklets/$BLOCK_NAME
-label=
+label= 
 interval=5
 
 # Volume
 [volume]
-label=
+label= 
 interval=1
 
 # Battery
 [battery]
-label=
+label= 
 interval=5
 
 # Time
 [time]
 command=date '+%a %H:%M' 
-label=
+label= 
 interval=5
 
 # Date
 #[date]
 #command=date '+%a %e %b %Y'
-#label=
+#label= 
 #interval=60
