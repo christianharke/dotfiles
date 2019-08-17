@@ -73,12 +73,5 @@ interval=5
 
 # Time
 [time]
-command=date '+%a %H:%M' 
 label= 
 interval=5
-
-# Date
-#[date]
-#command=date '+%a %e %b %Y'
-#label= 
-#interval=60

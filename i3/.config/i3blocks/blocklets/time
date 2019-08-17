@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+case $BLOCK_BUTTON in
+    1) notify-send "Date" "$(date '+%d.%m.%Y %H:%M:%S %Z')" ;;
+    2) ;; # TODO: Open calendar app
+    3) notify-send "Date" "$(date '+%d.%m.%Y %H:%M:%S %Z')" ;;
+esac
+
+date '+%a %H:%M'
