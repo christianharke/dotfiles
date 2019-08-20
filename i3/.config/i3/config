@@ -126,9 +126,13 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+# Assign applications to a workspace
 assign [class="Code"] $ws2
 assign [class="Firefox"] $ws3
 assign [class="Spotify"] $ws10
+
+# Configure appearance of applications
+for_window [class="Peek"] floating enable
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
