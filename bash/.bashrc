@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Infinite history
 export HISTSIZE=
 export HISTFILESIZE= 
@@ -5,8 +7,8 @@ export HISTCONTROL=ignoredups
 export HISTTIMEFORMAT='%F %T '
 export PROMPT_COMMAND='history -a'
 
-# Prevent entering the ssh key passphrase all the time
-eval `keychain --agents ssh --eval id_rsa --quiet`
+# Prevent entering passphrases all the time
+eval `keychain --quiet --agents gpg,ssh --eval 630966F4 id_rsa` # gpg, ssh keys
 
 # Aliases
 alias fa="fontawesome-menu -f icon-list.txt"
