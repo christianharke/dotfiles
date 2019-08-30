@@ -128,7 +128,9 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Assign applications to a workspace
 assign [class="Code"] $ws2
+assign [class="jetbrains-idea"] $ws2
 assign [class="Firefox"] $ws3
+assign [class="Google-chrome"] $ws3
 assign [class="Spotify"] $ws10
 
 # Configure appearance of applications
