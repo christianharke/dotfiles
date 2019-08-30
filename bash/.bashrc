@@ -12,3 +12,6 @@ alias fa="fontawesome-menu -f icon-list.txt"
 alias grep="grep --color=auto" # Color grep - highlight desired sequence
 alias lg="lazygit"
 alias mupdf="mupdf-x11"
+
+# tmuxinator
+source ~/.config/tmuxinator/bin/bash-completion
