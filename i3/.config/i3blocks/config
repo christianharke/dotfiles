@@ -58,6 +58,7 @@ interval=5
 # OpenVPN
 [openvpn]
 label= 
+command=~/.config/i3blocks/blocklets/openvpn -p /sys/fs/cgroup/pids/system.slice/openvpn-*.service/tasks
 interval=5
 
 # Bluetooth headset
