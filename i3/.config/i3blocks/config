@@ -41,13 +41,13 @@ interval=60
 # Temperature
 [temperature]
 label= 
-SENSOR_CHIP=dell_smm-virtual-0
+SENSOR_CHIP=coretemp-isa-0000
 interval=2
 
 # WiFi connection
 [wifi]
 label= 
-instance=wlp8s0
+instance=wlp82s0
 interval=5
 
 # Ethernet connection
