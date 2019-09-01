@@ -207,7 +207,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # finds out, if available)
 bar {
         # DEBUG:
-        #status_command 1>/tmp/i3blocks.out 2>/tmp/i3blocks.err i3blocks -vvv
+        #status_command 2>/tmp/i3blocks.err i3blocks -vvv | tee /tmp/i3blocks.out
         status_command i3blocks
         position top
         font pango:SauceCodePro Nerd Font Black 9
