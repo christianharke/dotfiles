@@ -11,15 +11,15 @@ root: ~/bluecare
 
 # Project hooks
 # Runs on project start, always
-# on_project_start: command
+on_project_start: systemctl start container@mongodb.service
 # Run on project start, the first time
-# on_project_first_start: command
+# on_project_first_start: systemctl start container@mongodb.service
 # Run on project start, after the first time
 # on_project_restart: command
 # Run on project exit ( detaching from tmux session )
 # on_project_exit: command
 # Run on project stop
-# on_project_stop: command
+on_project_stop: systemctl stop container@mongodb.service
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
@@ -31,7 +31,7 @@ root: ~/bluecare
 # tmux_command: byobu
 
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
-# startup_window: editor
+startup_window: blueconnect
 
 # Specifies (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
 # startup_pane: 1
@@ -40,6 +40,23 @@ root: ~/bluecare
 # attach: false
 
 windows:
-  - patstamm: cd ./patstamm/patstamm && ./runlocal.sh
-  - frontend: ./larnags/larnags/runlocal-frontend.sh
-  - cluster: ./larnags/larnags/runlocal-cluster.sh
+  - blueconnect:
+      layout: main-horizontal
+      root: ~/bluecare/larnags/larnags
+      panes:
+        - lazygit
+        - cd ./static/main && grunt
+        - ./runlocal-frontend.sh
+        - ./runlocal-cluster.sh
+  - patstamm:
+      layout: main-horizontal
+      root: ~/bluecare/patstamm/patstamm
+      panes:
+        - lazygit
+        - ./runlocal.sh
+  - mm-gui:
+      layout: main-horizontal
+      root: ~/bluecare/cssmm/mm-gui
+      panes:
+        - lazygit
+        - ./startApp.sh
