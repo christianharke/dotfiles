@@ -243,7 +243,7 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+d exec rofi -show combi -theme Arc-Dark
 
 # Set background image
-exec_always feh --bg-fill /home/christian/Pictures/nixos-artwork/wallpapers/nix-wallpaper-mosaic-blue.png
+exec_always feh --bg-scale /home/christian/Pictures/nixos-artwork/wallpapers/nix-wallpaper-mosaic-blue.png
 
 #############################
 ### settings for i3-gaps: ###
