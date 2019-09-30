@@ -1,7 +1,7 @@
 [user]
 	name = Christian Harke
-	email = ch.harke@gmail.com
-	signingkey = 630966F4
+	email = christian.harke@bluecare.ch
+	signingkey = 5A1EF24E
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
