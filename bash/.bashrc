@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Use vi mode
+set -o vi
+
 # Infinite history
 export HISTSIZE=
 export HISTFILESIZE= 
