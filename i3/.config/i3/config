@@ -245,6 +245,14 @@ bindsym $mod+d exec rofi -show combi -theme Arc-Dark
 # Set background image
 exec_always feh --bg-scale /home/christian/Pictures/nixos-artwork/wallpapers/nix-wallpaper-mosaic-blue.png
 
+# Screenshot
+set $scrot_binary       /etc/profiles/per-user/christian/bin/scrot
+set $scrot_out          $HOME/Pictures/screenshots/%F_%T.png
+set $scrot_notification notify-send -u low -t 2000
+bindsym Print exec $scrot_binary $scrot_out && $scrot_notification "Fullscreen screenshot saved"
+bindsym $mod+Print exec $scrot_binary -u $scrot_out && $scrot_notification "Current window screenshot saved"
+bindsym --release $mod+Shift+Print exec $scrot_binary -s $scrot_out -e 'xclip -selection clipboard -target image/png -i $f' && $scrot_notification "Screenshot copied to clipboard"
+
 #############################
 ### settings for i3-gaps: ###
 #############################
