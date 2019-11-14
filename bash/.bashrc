@@ -21,3 +21,9 @@ alias mupdf="mupdf-x11"
 
 # tmuxinator
 source ~/.config/tmuxinator/bin/bash-completion
+
+# fzf
+if command -v fzf-share >/dev/null; then
+  source "$(fzf-share)/key-bindings.bash"
+fi
+
