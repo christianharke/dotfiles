@@ -1,7 +1,7 @@
 # PLUGINS
 
 # Install Antigen
-source /nix/store/sg099wl7r282y2z1dj1r39bysgap6s79-antigen-2.2.3/share/antigen/antigen.zsh
+source $HOME/.config/zsh/lib/antigen.zsh
 
 # Plugins
 antigen bundle zsh-users/zsh-autosuggestions
