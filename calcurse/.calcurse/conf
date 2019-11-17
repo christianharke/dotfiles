@@ -1,0 +1,2 @@
+notification.command=calcurse --next | xargs -0 notify-send "Appointment"
+
