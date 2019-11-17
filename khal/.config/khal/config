@@ -1,0 +1,23 @@
+[calendars]
+
+[[work]]
+path = ~/.calendars/bluecare/calendar
+color = dark blue
+
+[[private]]
+path = ~/.calendars/nextcloud/personal
+color = dark red
+
+[default]
+default_calendar = work
+highlight_event_days = True
+
+[locale]
+local_timezone = Europe/Zurich
+default_timezone = Europe/Zurich
+timeformat = %H:%M
+dateformat = %d.%m.
+longdateformat = %d.%m.%Y
+datetimeformat = %d.%m. %H:%M
+longdatetimeformat = %d.%m.%Y %H:%M
+
