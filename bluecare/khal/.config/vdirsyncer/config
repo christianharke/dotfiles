@@ -25,3 +25,20 @@ url = "http://localhost:1080/users/christian.harke@bluecare.ch/calendar/"
 username.fetch = ["command", "~/.accounts/bluecare/vdirsyncer_user.sh"]
 password.fetch = ["command", "~/.accounts/bluecare/vdirsyncer_pass.sh"]
 
+
+[pair nextcloud_calendar]
+a = "nextcloud_calendar_local"
+b = "nextcloud_calendar_remote"
+collections = ["personal"]
+metadata = ["displayname", "color"]
+
+[storage nextcloud_calendar_local]
+type = "filesystem"
+path = "~/.calendars/nextcloud"
+fileext = ".ics"
+
+[storage nextcloud_calendar_remote]
+type = "caldav"
+url.fetch = ["command", "~/.accounts/get_secret.sh", "home/vdirsyncer_nextcloud", "url"]
+username.fetch = ["command", "~/.accounts/get_secret.sh", "home/vdirsyncer_nextcloud", "username"]
+password.fetch = ["command", "~/.accounts/get_secret.sh", "home/vdirsyncer_nextcloud", "password"]
