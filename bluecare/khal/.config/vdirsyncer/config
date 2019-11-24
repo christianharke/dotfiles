@@ -3,7 +3,23 @@ status_path = "~/.vdirsyncer/status/"
 
 
 # CARDDAV
-# TODO
+
+[pair bc_contacts]
+a = "bc_contacts_local"
+b = "bc_contacts_remote"
+collections = ["from a", "from b"]
+#metadata = ["displayname", "color"]
+
+[storage bc_contacts_local]
+type = "filesystem"
+path = "~/.contacts/bluecare"
+fileext = ".vcf"
+
+[storage bc_contacts_remote]
+type = "carddav"
+url = "http://localhost:1080/users/christian.harke@bluecare.ch/contacts/"
+username.fetch = ["command", "~/.accounts/bluecare/vdirsyncer_user.sh"]
+password.fetch = ["command", "~/.accounts/bluecare/vdirsyncer_pass.sh"]
 
 
 # CALDAV
@@ -42,3 +58,4 @@ type = "caldav"
 url.fetch = ["command", "~/.accounts/get_secret.sh", "home/vdirsyncer_nextcloud", "url"]
 username.fetch = ["command", "~/.accounts/get_secret.sh", "home/vdirsyncer_nextcloud", "username"]
 password.fetch = ["command", "~/.accounts/get_secret.sh", "home/vdirsyncer_nextcloud", "password"]
+
