@@ -1,0 +1,41 @@
+[general]
+accounts = work
+pythonfile = ~/.config/offlineimap/offlineimap.py
+socktimetout = 30
+
+[Account work]
+localrepository = work-local
+remoterepository = work-remote
+quick = 5
+
+[Repository work-local]
+type = Maildir
+localfolders = ~/.mail/bluecare
+quick = 5
+
+[Repository work-remote]
+type = IMAP
+maxconnections = 1
+starttls = no
+ssl = no
+remotehost = localhost
+remoteport = 1143
+remoteusereval = get_user()
+remotepasseval = get_pass()
+folderfilter = lambda folder: folder not in [
+  'Calendar',
+  'Calendar/Birthdays',
+  'Contacts',
+  'Deleted Items',
+  'Drafts',
+  'Journal',
+  'Junk Email',
+  'Notes',
+  'Outbox',
+  'Sync Issues',
+  'Sync Issues/Conflicts',
+  'Sync Issues/Local Failures',
+  'Sync Issues/Server Failures',
+  'Tasks',
+  ]
+

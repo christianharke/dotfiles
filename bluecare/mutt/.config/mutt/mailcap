@@ -1,0 +1,5 @@
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
+image/jpeg; feh -Z %s;
+image/png; feh -Z %s;
+image/*; /home/user/.mutt/callw3m.sh %s; copiousoutput;
+

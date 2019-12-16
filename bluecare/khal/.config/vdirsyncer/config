@@ -18,8 +18,8 @@ fileext = ".vcf"
 [storage bc_contacts_remote]
 type = "carddav"
 url = "http://localhost:1080/users/christian.harke@bluecare.ch/contacts/"
-username.fetch = ["command", "~/.accounts/bluecare/vdirsyncer_user.sh"]
-password.fetch = ["command", "~/.accounts/bluecare/vdirsyncer_pass.sh"]
+username.fetch = ["command", "~/.accounts/bluecare/get_user.sh"]
+password.fetch = ["command", "~/.accounts/bluecare/get_pass.sh"]
 
 
 # CALDAV
@@ -38,8 +38,8 @@ fileext = ".ics"
 [storage bc_calendar_remote]
 type = "caldav"
 url = "http://localhost:1080/users/christian.harke@bluecare.ch/calendar/"
-username.fetch = ["command", "~/.accounts/bluecare/vdirsyncer_user.sh"]
-password.fetch = ["command", "~/.accounts/bluecare/vdirsyncer_pass.sh"]
+username.fetch = ["command", "~/.accounts/bluecare/get_user.sh"]
+password.fetch = ["command", "~/.accounts/bluecare/get_pass.sh"]
 
 
 [pair nextcloud_calendar]
