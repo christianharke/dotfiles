@@ -52,3 +52,6 @@ auto_view text/html                                      # view html automatical
 alternative_order text/plain text/enriched text/html     # save html for last
 set mailcap_path 	= ~/.config/mutt/mailcap
 
+# Set default save direcory
+macro attach s "<save-entry><bol>~/Downloads/<eol>" "Save to Downloads"
+
