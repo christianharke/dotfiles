@@ -135,7 +135,10 @@ assign [class="Code"] $ws2
 assign [class="jetbrains-idea"] $ws2
 assign [class="Firefox"] $ws3
 assign [class="Google-chrome"] $ws3
+assign [class="Daily"] $ws4
+assign [class="Signal"] $ws4
 assign [class="Slack"] $ws4
+assign [class="TelegramDesktop"] $ws4
 assign [class="Spotify"] $ws10
 
 # Configure appearance of applications
