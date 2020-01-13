@@ -8,6 +8,7 @@ CREATED="2018-01-23"
 UPDATED="2018-01-23"
 
 main(){
+  cd "$(dirname "$0")/fontawesome-menu.d"
   while getopts :vhf:o:p: option; do
     case "${option}" in
       f) LISTFILE="${OPTARG}" ;;
