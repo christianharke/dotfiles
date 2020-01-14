@@ -141,9 +141,11 @@ assign [class="Slack"] $ws4
 assign [class="TelegramDesktop"] $ws4
 assign [class="Spotify"] $ws10
 assign [class="Steam"] $ws9
+assign [class="TeamSpeak 3"] $ws9
 
 # Configure appearance of applications
 for_window [class="Peek"] floating enable
+#exec --no-startup-id "i3-msg 'workspace 9 ; append_layout /home/christian/.config/i3/workspace-9.json'"
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
