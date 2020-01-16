@@ -253,7 +253,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -10
 bindsym $mod+d exec rofi -show combi -theme Arc-Dark
 
 # Set background image
-exec_always feh --bg-center $HOME/Pictures/wallpaper.png
+exec_always feh --no-fehbg --bg-center $HOME/Pictures/wallpaper.png
 
 # Screenshot
 set $scrot_binary       /etc/profiles/per-user/christian/bin/scrot
