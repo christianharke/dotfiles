@@ -256,7 +256,7 @@ bindsym $mod+d exec rofi -show combi -theme Arc-Dark
 exec_always feh --no-fehbg --bg-center $HOME/Pictures/wallpaper.png
 
 # Screenshot
-set $scrot_binary       /etc/profiles/per-user/christian/bin/scrot
+set $scrot_binary       /run/current-system/sw/bin/scrot
 set $scrot_out          $HOME/Pictures/screenshots/%F_%T.png
 set $scrot_notification notify-send -u low -t 2000
 bindsym Print exec $scrot_binary $scrot_out && $scrot_notification "Fullscreen screenshot saved"
