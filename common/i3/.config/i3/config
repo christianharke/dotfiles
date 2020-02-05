@@ -252,6 +252,9 @@ bindsym XF86MonBrightnessDown exec xbacklight -10
 # Application runner (dmenu replacement)
 bindsym $mod+d exec rofi -show combi -theme Arc-Dark
 
+# Detect DisplayLink displays
+exec --no-startup-id xrandr --setprovideroutputsource 1 0; xrandr --setprovideroutputsource 2 0; autorandr -c; feh --no-fehbg --bg-center $HOME/Pictures/wallpaper.png
+
 # Set background image
 exec_always feh --no-fehbg --bg-center $HOME/Pictures/wallpaper.png
 
