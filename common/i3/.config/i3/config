@@ -186,18 +186,19 @@ default_border pixel
 
 #hide_edge_borders none
 
-set $bg-color            #2f343f
-set $inactive-bg-color   #2f343f
-set $text-color          #f3f4f5
-set $inactive-text-color #676E7D
-set $urgent-bg-color     #E53935
+set $bg-color               #285577
+set $inactive-bg-color      #2f343f
+set $urgent-bg-color        #E53935
+set $border-color           #436986
+set $text-color             #f3f4f5
+set $inactive-text-color    #676E7D
 
 # window colors
-#                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          #00ff00
-client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+#                           border                  background              text                    indicator
+client.focused              $border-color           $bg-color               $text-color             #00ff00
+client.unfocused            $inactive-bg-color      $inactive-bg-color      $inactive-text-color    #00ff00
+client.focused_inactive     $inactive-bg-color      $inactive-bg-color      $inactive-text-color    #00ff00
+client.urgent               $urgent-bg-color        $urgent-bg-color        $text-color             #00ff00
 
 # Defining colors
 # RGB
@@ -235,9 +236,9 @@ bar {
 bindsym $mod+x exec xautolock -locknow
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle #mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%   #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%   #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle         #mute sound
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
