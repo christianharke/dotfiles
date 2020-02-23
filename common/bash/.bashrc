@@ -27,3 +27,6 @@ if command -v fzf-share >/dev/null; then
   source "$(fzf-share)/key-bindings.bash"
 fi
 
+# broot
+source /home/christian/.config/broot/launcher/bash/br
+

@@ -4,3 +4,7 @@ for FN in $HOME/.config/zsh/*.zsh ; do
 done
 
 export PATH="/home/christian/bin/:$PATH"
+
+# broot
+source /home/christian/.config/broot/launcher/bash/br
+
