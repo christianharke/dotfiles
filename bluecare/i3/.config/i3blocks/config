@@ -79,3 +79,9 @@ interval=5
 [time]
 label= 
 interval=5
+
+# Shutdown
+[shutdown_menu]
+full_text=
+ENABLE_CONFIRMATIONS=true
+LOCKSCRIPT=xautolock -locknow
