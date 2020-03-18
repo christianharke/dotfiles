@@ -70,6 +70,10 @@ interval=1
 label= 
 interval=1
 
+# Keyboard lighting
+[key_light]
+full_text=⌨
+
 # Battery
 [battery2]
 interval=5
