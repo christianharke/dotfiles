@@ -71,8 +71,7 @@ label=
 interval=1
 
 # Battery
-[battery]
-label= 
+[battery2]
 interval=5
 
 # Time
