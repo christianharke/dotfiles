@@ -1,9 +1,1 @@
-#!/usr/bin/env bash
-
-case $BLOCK_BUTTON in
-    1) notify-send "$(date '+%d.%m.%Y %H:%M:%S %Z')" "$(fortune -s)" ;;
-    2) ;; # TODO: Open calendar app
-    3) notify-send "$(date '+%d.%m.%Y %H:%M:%S %Z')" "$(fortune -so)" ;;
-esac
-
-date '+%a %H:%M'
+../../../../../common/i3/.config/i3blocks/blocklets/time

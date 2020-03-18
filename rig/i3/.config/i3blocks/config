@@ -44,20 +44,9 @@ label=
 SENSOR_CHIP=dell_smm-virtual-0
 interval=2
 
-# WiFi connection
-[wifi]
-label= 
-instance=wlp8s0
-interval=5
-
 # Ethernet connection
 [iface]
 label= 
-interval=5
-
-# OpenVPN
-[openvpn]
-label= 
 interval=5
 
 # Bluetooth headset
@@ -69,11 +58,6 @@ interval=5
 [volume]
 label= 
 interval=1
-
-# Battery
-[battery]
-label= 
-interval=5
 
 # Time
 [time]
