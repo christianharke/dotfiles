@@ -20,6 +20,17 @@ if [[ -z "$INTERFACE" ]] ; then
 fi
 #------------------------------------------------------------------------
 
+function show_ssid {
+    notify-send "WiFi SSID" "$(/sbin/iwconfig $INTERFACE | iwgetid wlp4s0 -r)"
+}
+
+case $BLOCK_BUTTON in
+    1) show_ssid ;;
+    3) show_ssid ;;
+esac
+
+#------------------------------------------------------------------------
+
 # As per #36 -- It is transparent: e.g. if the machine has no battery or wireless
 # connection (think desktop), the corresponding block should not be displayed.
 [[ ! -d /sys/class/net/${INTERFACE}/wireless ]] && exit
