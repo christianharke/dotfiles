@@ -21,7 +21,7 @@ fi
 #------------------------------------------------------------------------
 
 function show_ssid {
-    notify-send "WiFi SSID" "$(/sbin/iwconfig $INTERFACE | iwgetid wlp4s0 -r)"
+    notify-send "Wi-Fi SSID" "$(iwgetid -r)"
 }
 
 case $BLOCK_BUTTON in
