@@ -267,6 +267,9 @@ bindsym Print exec $scrot_binary $scrot_out && $scrot_notification "Fullscreen s
 bindsym $mod+Print exec $scrot_binary -u $scrot_out && $scrot_notification "Current window screenshot saved"
 bindsym --release $mod+Shift+Print exec $scrot_binary -s $scrot_out -e 'xclip -selection clipboard -target image/png -i $f' && $scrot_notification "Screenshot copied to clipboard"
 
+exec --no-startup-id nextcloud --background
+
+
 #############################
 ### settings for i3-gaps: ###
 #############################
