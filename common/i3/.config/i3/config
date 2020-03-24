@@ -136,6 +136,7 @@ assign [class="jetbrains-idea"] $ws2
 assign [class="Firefox"] $ws3
 assign [class="Google-chrome"] $ws3
 assign [class="Daily"] $ws4
+assign [class="Microsoft Teams - Preview"] $ws4
 assign [class="Signal"] $ws4
 assign [class="Slack"] $ws4
 assign [class="TelegramDesktop"] $ws4
@@ -144,6 +145,7 @@ assign [class="Steam"] $ws9
 assign [class="TeamSpeak 3"] $ws9
 
 # Configure appearance of applications
+for_window [title="Microsoft Teams Notification"] floating enable
 for_window [class="Peek"] floating enable
 #exec --no-startup-id "i3-msg 'workspace 9 ; append_layout /home/christian/.config/i3/workspace-9.json'"
 
