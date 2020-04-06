@@ -21,4 +21,5 @@ alias fa="fontawesome-menu -f icon-list.txt"            # Open Fontawesome icon 
 alias jshell="nix-shell -p openjdk12 --command jshell"  # Java REPL
 alias lg="lazygit"                                      # Git CLI UI
 alias mupdf="mupdf-x11"                                 # PDF viewer
+alias pass="source pass"
 

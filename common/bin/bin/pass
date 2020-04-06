@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+if ! $(op get account &>/dev/null); then
+    eval $(op signin my)
+fi
+
+RESULT=$(op get item "${1}" | jq '[.details.fields[] | select(.designation == "password" or .designation == "username")] | map({ (.designation): .value }) | add')
+echo ${RESULT} | jq --raw-output '.password' | xclip -selection clipboard
+echo ${RESULT} | jq
+
