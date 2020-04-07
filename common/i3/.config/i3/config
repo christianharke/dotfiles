@@ -135,6 +135,7 @@ assign [class="Code"]                       $ws2
 assign [class="jetbrains-idea"]             $ws2
 assign [class="Firefox"]                    $ws3
 assign [class="Google-chrome"]              $ws3
+assign [class="qutebrowser"]                $ws3
 assign [class="Daily"]                      $ws4
 assign [class="Microsoft Teams - Preview"]  $ws4
 assign [class="Signal"]                     $ws4
