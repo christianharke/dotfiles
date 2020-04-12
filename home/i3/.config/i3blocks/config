@@ -55,11 +55,6 @@ interval=5
 label= 
 interval=5
 
-# OpenVPN
-[openvpn]
-label= 
-interval=5
-
 # Bluetooth headset
 [btheadset]
 HEADSET_ID=04:5D:4B:97:5D:55
