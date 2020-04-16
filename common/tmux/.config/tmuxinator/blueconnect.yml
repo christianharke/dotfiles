@@ -11,15 +11,15 @@ root: ~/bluecare
 
 # Project hooks
 # Runs on project start, always
-on_project_start: systemctl start container@mongodb.service container@devmail.service
+on_project_start: sudo systemctl start container@mongodb.service container@devmail.service
 # Run on project start, the first time
-# on_project_first_start: systemctl start container@mongodb.service
+# on_project_first_start: command
 # Run on project start, after the first time
 # on_project_restart: command
 # Run on project exit ( detaching from tmux session )
 # on_project_exit: command
 # Run on project stop
-on_project_stop: systemctl stop container@mongodb.service
+on_project_stop: sudo systemctl stop container@mongodb.service container@devmail.service
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
@@ -40,23 +40,42 @@ startup_window: blueconnect
 # attach: false
 
 windows:
-  - blueconnect:
-      layout: main-horizontal
-      root: ~/bluecare/larnags/larnags
-      panes:
-        - lazygit
-        - cd ./static/main && grunt
-        - ./runlocal-frontend.sh
-        - ./runlocal-cluster.sh
-  - patstamm:
-      layout: main-horizontal
-      root: ~/bluecare/patstamm/patstamm
-      panes:
-        - lazygit
-        - ./runlocal.sh
-  - mm-gui:
-      layout: main-horizontal
-      root: ~/bluecare/cssmm/mm-gui
-      panes:
-        - lazygit
-        - ./startApp.sh
+    - system:
+        layout: even-horizontal
+        panes:
+            - journalctl -f -u container@mongodb.service
+            - echo "TODO: HIN Client"
+            - echo "TODO: QuoVadis Stuff"
+    - blueconnect:
+        layout: main-horizontal
+        root: ~/bluecare/larnags/larnags
+        panes:
+            - lazygit
+            - cd ./static/main && grunt
+            - HTTP_PORT=9000 DEBUG_PORT=5000 JMX_PORT=9900 ./runlocal-frontend.sh
+            - DEBUG_PORT=5500 JMX_PORT=9990 ./runlocal-cluster.sh
+    - patstamm:
+        layout: main-horizontal
+        root: ~/bluecare/patstamm/patstamm
+        panes:
+            - lazygit
+            - HTTP_PORT=9001 DEBUG_PORT=5001 JMX_PORT=9901 ./runlocal.sh
+    - bluemedication:
+        layout: main-horizontal
+        root: ~/bluecare/bmed/bluemedication
+        panes:
+            - lazygit
+            - HTTP_PORT=9002 DEBUG_PORT=5002 ./startApp.sh
+    - fileshelf:
+        layout: main-horizontal
+        root: ~/bluecare/fil/fileshelf
+        panes:
+            - lazygit
+            - HTTP_PORT=9003 DEBUG_PORT=5003 ./run-local.sh
+    - mm-gui:
+        layout: main-horizontal
+        root: ~/bluecare/cssmm/mm-gui
+        panes:
+            - lazygit
+            - HTTP_PORT=9004 DEBUG_PORT=5004 ./startApp.sh
+
