@@ -141,6 +141,7 @@ assign [class="Microsoft Teams - Preview"]  $ws4
 assign [class="Signal"]                     $ws4
 assign [class="Slack"]                      $ws4
 assign [class="TelegramDesktop"]            $ws4
+assign [class="zoom"]                       $ws4
 assign [class="Steam"]                      $ws9
 assign [class="TeamSpeak 3"]                $ws9
 assign [class="Spotify"]                    $ws10
