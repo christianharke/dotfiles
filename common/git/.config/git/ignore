@@ -148,3 +148,5 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 
+# VIM swap files
+*.swp
