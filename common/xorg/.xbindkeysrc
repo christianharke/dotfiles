@@ -102,6 +102,12 @@
 "xbacklight +10"
   XF86MonBrightnessUp
 
+"kbdlight down 50"
+  XF86KbdBrightnessDown
+
+"kbdlight up 50"
+  XF86KbdBrightnessUp
+
 "autorandr -c"
   XF86Display
 
