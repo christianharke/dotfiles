@@ -96,10 +96,10 @@
 "playerctl previous"
   XF86AudioPrev
 
-"light -U 10"
+"xbacklight -10"
   XF86MonBrightnessDown
 
-"light -A 10"
+"xbacklight +10"
   XF86MonBrightnessUp
 
 "kbdlight down 50"
