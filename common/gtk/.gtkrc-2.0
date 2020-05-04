@@ -2,8 +2,8 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/christian/.gtkrc-2.0.mine"
-gtk-theme-name="Arc-Darker"
-gtk-icon-theme-name="Paper"
+gtk-theme-name="Adwaita-dark"
+gtk-icon-theme-name="Paper-Mono-Dark"
 gtk-font-name="DejaVu Sans 10"
 gtk-cursor-theme-name="Bibata_Amber"
 gtk-cursor-theme-size=0
