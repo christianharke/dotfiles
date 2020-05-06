@@ -1,0 +1,5 @@
+REPOSITORY="${1}"
+TAG="${2}"
+REGISTRY=https://docker-registry.dev.bluecare.ch:5000
+DIGEST=$(docker-ls tag ${REPOSITORY}:${TAG} -r "${REGISTRY}" --progress-indicator=false -j | jq --raw-output '.digest')
+docker-rm "${REPOSITORY}:${DIGEST}" -r "${REGISTRY}"
