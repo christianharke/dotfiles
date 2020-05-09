@@ -59,6 +59,12 @@ vol() {
   echo -e "$vol"
 }
 
+## MIC
+mic() {
+  mic=`amixer get Capture | awk -F'[][]' 'END{ print $4":"$2 }' | sed 's/on://g'`
+  echo -e "$mic"
+}
+
 ## BATTERY
 batt() {
   batt="$(acpi -b | grep -Po "[[:digit:]]{1,3}%")"
@@ -79,6 +85,6 @@ SLEEP_SEC=1
 # So I would love to add more functions to this script but it makes the 
 # echo output too long to display correctly.
 while :; do
-    echo "  $(cpu) ·   $(mem) ·   $(hdd) ·  $(temp) ·   $(wifi) ·   $(bt) ·   $(vol) ·  $(batt) ·   $(datetime)"
+    echo "  $(cpu) ·   $(mem) ·   $(hdd) ·  $(temp) ·   $(wifi) ·   $(bt) ·   $(vol) ·  $(mic) ·  $(batt) ·   $(datetime)"
 	sleep $SLEEP_SEC
 done
