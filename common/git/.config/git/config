@@ -1,6 +1,6 @@
 [user]
     name = Christian Harke
-    email = ch.harke@gmail.com
+    email = christian@harke.ch
     signingkey = 630966F4
 [filter "media"]
     clean = git-media-clean %f
