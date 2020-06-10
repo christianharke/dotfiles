@@ -54,6 +54,7 @@ hs_err_pid*
 
 # IDEs
 .idea/
+.vscode/
 
 ##
 # Node
