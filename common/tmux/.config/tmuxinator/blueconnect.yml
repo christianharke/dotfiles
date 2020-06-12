@@ -41,10 +41,12 @@ startup_window: blueconnect
 
 windows:
     - system:
-        layout: even-horizontal
+        layout: tiled
+        root: ~/bluecare/larnags/larnags
         panes:
             - journalctl -f -u container@mongodb.service
-            - echo "TODO: HIN Client"
+            - ./startSQL.sh
+            - tail -f "/run/hinclient/.HIN/HIN Client/hinclient.log"
             - echo "TODO: QuoVadis Stuff"
     - blueconnect:
         layout: main-horizontal
