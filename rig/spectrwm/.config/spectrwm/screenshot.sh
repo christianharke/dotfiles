@@ -1,0 +1,1 @@
+../../../../common/spectrwm/.config/spectrwm/screenshot.sh
