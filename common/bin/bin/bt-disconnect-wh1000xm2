@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
 
-bluetoothctl -- disconnect 04:5D:4B:97:5D:55
+cd "$(dirname "$0")" || exit
+. ./lib/btctl
+
+device="04:5D:4B:97:5D:55"
+disconnect $device
+
