@@ -79,4 +79,11 @@ windows:
         panes:
             - lazygit
             - HTTP_PORT=9004 DEBUG_PORT=5004 ./startApp.sh
+    - mcsi:
+        layout: main-horizontal
+        root: ~/bluecare/psif
+        panes:
+            - cd mcsi && lazygit
+            - cd mcsi && sbt run-server
+            - ./solr/solr_/bin/solr start
 
