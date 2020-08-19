@@ -67,7 +67,7 @@ mic() {
 
 ## BATTERY
 batt() {
-  batt="$(acpi -b | grep -Po "[[:digit:]]{1,3}%")"
+  batt="$(acpi -b | head -n 1 | grep -Po "[[:digit:]]{1,3}%")"
   echo -e "$batt"
 }
 
