@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
 xrandr --output DP-2 --mode 1920x1080 --panning 1920x1080+0+0 --rate 60
-feh --no-fehbg --bg-center $HOME/Pictures/wallpaper.png
+feh --no-fehbg --bg-fill --randomize $HOME/Pictures/wallpapers
+

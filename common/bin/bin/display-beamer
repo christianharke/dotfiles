@@ -2,4 +2,5 @@
 
 xrandr --output DP-2 --auto --output HDMI-0 --auto --right-of DP-2
 xrandr --auto
-feh --no-fehbg --bg-center $HOME/Pictures/wallpaper.png
+feh --no-fehbg --bg-fill --randomize $HOME/Pictures/wallpapers
+

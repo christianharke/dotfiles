@@ -4,5 +4,5 @@ xrandr --setprovideroutputsource 1 0
 xrandr --setprovideroutputsource 2 0
 xrandr --output DP-2 --mode 1920x1080 --panning 1920x1080+0+0 --rate 60 --output DVI-I-2-2 --mode 1920x1200 --rate 60 --right-of DP-2 --output DVI-I-1-1 --mode 1920x1200 --rate 60 --right-of DVI-I-2-2
 xrandr --auto
-feh --no-fehbg --bg-center $HOME/Pictures/wallpaper.png
+feh --no-fehbg --bg-fill --randomize $HOME/Pictures/wallpapers
 
