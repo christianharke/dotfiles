@@ -7,12 +7,14 @@ off
 output DVI-I-1-1
 off
 output DP-2
+crtc 0
 gamma 1.099:1.0:0.909
 mode 1920x1080
 pos 0x0
 rate 60.00
 output HDMI-0
+crtc 1
 gamma 1.099:1.0:0.909
 mode 1280x800
 pos 1920x0
-rate 60.00
+rate 59.81
