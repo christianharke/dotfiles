@@ -22,4 +22,5 @@ alias jshell="nix-shell -p openjdk12 --command jshell"  # Java REPL
 alias lg="lazygit"                                      # Git CLI UI
 alias mupdf="mupdf-x11"                                 # PDF viewer
 alias pass="source pass"
+alias rr="ranger"
 
