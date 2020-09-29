@@ -24,3 +24,10 @@ alias mupdf="mupdf-x11"                                 # PDF viewer
 alias pass="source pass"
 alias rr="ranger"
 
+cht() {
+    curl "cht.sh/${1}"
+}
+
+wttr() {
+    curl "wttr.in/${1}"
+}
