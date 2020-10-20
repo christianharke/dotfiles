@@ -10,6 +10,7 @@
 ].ds_store
 ._*
 ]Thumbs.db
+]photothumb.db
 System Volume Information
 
 .*.sw?
@@ -40,3 +41,5 @@ System Volume Information
 .nfs*
 
 My Saved Places.
+
+\#*#
