@@ -18,7 +18,7 @@ alias lsa='ls -a'
 alias grep="grep --color=auto"                          # Color grep - highlight desired sequence
 
 alias fa="fontawesome-menu -f icon-list.txt"            # Open Fontawesome icon selector
-alias jshell="nix-shell -p openjdk12 --command jshell"  # Java REPL
+alias jshell="nix-shell -p openjdk --command jshell"    # Java REPL
 alias lg="lazygit"                                      # Git CLI UI
 alias mupdf="mupdf-x11"                                 # PDF viewer
 alias pass="source pass"
