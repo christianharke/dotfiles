@@ -23,6 +23,7 @@ alias lg="lazygit"                                      # Git CLI UI
 alias mupdf="mupdf-x11"                                 # PDF viewer
 alias pass="source pass"
 alias rr="ranger"
+alias visualvm="visualvm --cp:a ~/jmx/jmxremote_optional.jar"
 
 cht() {
     curl "cht.sh/${1}"
