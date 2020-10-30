@@ -1,0 +1,57 @@
+# /home/christian/.config/tmuxinator/cci.yml
+
+name: cci
+root: ~/bluecare
+
+# Optional tmux socket
+# socket_name: foo
+
+# Note that the pre and post options have been deprecated and will be replaced by
+# project hooks.
+
+# Project hooks
+# Runs on project start, always
+on_project_start: ./cci/cci/startDB.sh
+# Run on project start, the first time
+# on_project_first_start: command
+# Run on project start, after the first time
+# on_project_restart: command
+# Run on project exit ( detaching from tmux session )
+on_project_exit: command
+# Run on project stop
+on_project_stop: docker stop cci-dev-db && ./psif/solr/solr_/bin/solr stop
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+startup_window: cci
+
+# Specifies (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
+# startup_pane: 1
+
+# Controls whether the tmux session should be attached to automatically. Defaults to true.
+# attach: false
+
+windows:
+    - db-logs: docker logs -f cci-dev-db
+    - cci:
+        layout: main-horizontal
+        root: ~/bluecare/cci/cci
+        panes:
+            - lazygit
+            - JAVA_HOME=$JAVA11_HOME ./startApp.sh
+    - mcsi:
+        layout: main-horizontal
+        root: ~/bluecare/psif
+        panes:
+            - cd mcsi && lazygit
+            - cd mcsi && sbt run-server
+            - ./solr/solr_/bin/solr start
+
