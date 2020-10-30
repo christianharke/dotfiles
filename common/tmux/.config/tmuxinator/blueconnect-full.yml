@@ -46,6 +46,7 @@ windows:
             - journalctl -f -u container@mongodb.service
             - docker logs -f blueconnect-sqlserver
             - tail -f "/run/hinclient/.HIN/HIN Client/hinclient.log"
+            - echo "TODO: QuoVadis Stuff"
     - blueconnect:
         layout: main-horizontal
         root: ~/bluecare/larnags/larnags
@@ -60,4 +61,30 @@ windows:
         panes:
             - lazygit
             - HTTP_PORT=9001 DEBUG_PORT=5001 JMX_PORT=9901 ./runlocal.sh
+    - fileshelf:
+        layout: main-horizontal
+        root: ~/bluecare/fil/fileshelf
+        panes:
+            - lazygit
+            - HTTP_PORT=9003 DEBUG_PORT=5003 ./run-local.sh
+    - bluemedication:
+        layout: main-horizontal
+        root: ~/bluecare/bmed/bluemedication
+        panes:
+            - lazygit
+            - HTTP_PORT=9002 DEBUG_PORT=5002 ./startApp.sh
+    - multimed:
+        layout: main-horizontal
+        root: ~/bluecare/cssmm/mm-gui
+        panes:
+            - lazygit
+            - HTTP_PORT=9004 DEBUG_PORT=5004 ./startApp.sh
+            - echo "TODO: mm-jobs"
+    - mcsi:
+        layout: main-horizontal
+        root: ~/bluecare/psif
+        panes:
+            - cd mcsi && lazygit
+            - cd mcsi && sbt run-server
+            - ./solr/solr_/bin/solr start
 
