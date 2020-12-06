@@ -19,6 +19,9 @@ alias l="exa -hl --git --icons"
 alias la="exa -ahl --git --icons"
 alias mupdf="mupdf-x11"
 
+# Starship prompt
+eval "$(starship init bash)"
+
 # tmuxinator
 source ~/.config/tmuxinator/bin/bash-completion
 

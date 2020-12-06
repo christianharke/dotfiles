@@ -8,10 +8,6 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-# Theme
-antigen theme denysdovhan/spaceship-prompt
-SPACESHIP_DOCKER_SHOW=false
-
 # Apply Antigen stuff
 antigen apply
 
