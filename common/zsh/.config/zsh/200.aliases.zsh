@@ -14,6 +14,7 @@ alias la="exa -ahl --git --icons"
 alias ll='l'
 alias ls="ls -sh --color='auto'"
 alias lsa='ls -a'
+alias tree='l --tree'
 
 alias grep="grep --color=auto"                          # Color grep - highlight desired sequence
 
