@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+xfreerdp /v:bluecare-s24 /u:chr@bluecare.local /size:1896x1030
+
