@@ -4,7 +4,7 @@
 #
 # Inspired by: https://github.com/leogtzr/minimal-safe-bash-template
 #
-# Version: 1.0
+version="1.0.0"
 #
 # Copyright 2021 Christian Harke
 #
@@ -37,15 +37,12 @@ trap clean_up ERR EXIT SIGINT SIGTERM
 
 usage() {
     cat <<USAGE_TEXT
-Usage: ${script_name} [-h | --help] [-a <ARG>] [--abc <ARG>] [-f | --flag]
+Usage: ${script_name} [-h | --help] [--version] [-a <ARG>] [--abc <ARG>] [-f | --flag]
 
 DESCRIPTION
     Your description here.
 
     OPTIONS:
-
-    -h, --help
-        Print this help and exit.
 
     -f, --flag
         Description for flag option.
@@ -55,6 +52,12 @@ DESCRIPTION
 
     --abc
         Description for the --abc option.
+
+    -h, --help
+        Print this help and exit.
+
+    --version
+        Print version information and exit.
 
 USAGE_TEXT
 }
@@ -81,7 +84,7 @@ parse_user_options() {
     local opts
 
     # The following code works perfectly for 
-    opts=$(getopt --options a:,f,h --long abc:,help,flag -- "${args[@]}" 2> /dev/null) || {
+    opts=$(getopt --options a:,f,h --long abc:,help,version,flag -- "${args[@]}" 2> /dev/null) || {
         usage
         die "error: parsing options" "${error_parsing_options}"
     }
@@ -107,6 +110,13 @@ parse_user_options() {
 
         --help|-h)
             usage
+
+            exit 0
+            shift
+            ;;
+
+        --version)
+            echo "$(basename $0) ${version}"
 
             exit 0
             shift
@@ -149,4 +159,5 @@ if ((a_option_flag)); then
 fi
 
 exit 0
+
 
