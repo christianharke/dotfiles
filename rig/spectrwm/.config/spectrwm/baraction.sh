@@ -66,6 +66,6 @@ SLEEP_SEC=1
 # So I would love to add more functions to this script but it makes the 
 # echo output too long to display correctly.
 while :; do
-    echo "  $(cpu) ·   $(mem) ·   $(hdd) ·  $(temp) ·   $(bt) ·   $(vol) ·  $(mic) ·   $(datetime)"
+    echo "  $(cpu) ·   $(mem) ·   $(hdd) ·  $(temp) ·   $(vol) ·  $(mic) ·   $(datetime)"
 	sleep $SLEEP_SEC
 done
