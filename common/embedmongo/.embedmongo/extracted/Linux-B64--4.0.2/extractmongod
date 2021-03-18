@@ -1,1 +1,1 @@
-/run/current-system/sw/bin/mongod
+../mongod
