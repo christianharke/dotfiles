@@ -11,7 +11,9 @@ root: ~/bluecare
 
 # Project hooks
 # Runs on project start, always
-on_project_start: sudo systemctl start container@mongodb.service container@devmail.service && ./larnags/larnags/startSQL.sh
+on_project_start:
+  - sudo systemctl start container@mongodb.service
+  - sudo systemctl start container@devmail.service
 # Run on project start, the first time
 # on_project_first_start: command
 # Run on project start, after the first time
@@ -19,7 +21,10 @@ on_project_start: sudo systemctl start container@mongodb.service container@devma
 # Run on project exit ( detaching from tmux session )
 # on_project_exit: command
 # Run on project stop
-on_project_stop: sudo systemctl stop container@mongodb.service container@devmail.service && docker stop blueconnect-sqlserver && ./psif/solr/solr_/bin/solr stop
+on_project_stop:
+  - sudo systemctl stop container@mongodb.service
+  - sudo systemctl stop container@devmail.service
+  - ./psif/solr/solr_/bin/solr stop
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
@@ -44,7 +49,7 @@ windows:
         layout: tiled
         panes:
             - journalctl -f -u container@mongodb.service
-            - docker logs -f blueconnect-sqlserver
+            - journalctl -f -u container@devmail.service
             - tail -f "/run/hinclient/.HIN/HIN Client/hinclient.log"
             - echo "TODO: QuoVadis Stuff"
     - blueconnect:
