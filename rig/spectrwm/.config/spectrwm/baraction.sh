@@ -14,7 +14,7 @@ cpu() {
 
 ## RAM
 mem() {
-  mem=`free | awk '/Mem/ {printf "%d\%\n", $3 / $2 * 100 }'`
+  mem=`free | awk '/Mem/ {printf "%d%\n", $3 / $2 * 100 }'`
   echo -e "$mem"
 }
 

@@ -14,7 +14,7 @@ cpu() {
 
 ## RAM
 mem() {
-  mem=`free | awk '/Mem/ {printf "%d\%\n", $3 / $2 * 100 }'`
+  mem=`free | awk '/Mem/ {printf "%d%\n", $3 / $2 * 100 }'`
   echo -e "$mem"
 }
 
@@ -38,7 +38,7 @@ wifi() {
     echo "down"
     exit
   fi
-  quality=$(grep "$interface" /proc/net/wireless | awk '{ printf "%d\%", int($3 * 100 / 70) }')
+  quality=$(grep "$interface" /proc/net/wireless | awk '{ printf "%d%", int($3 * 100 / 70) }')
   echo -e "$quality"
 }
 
