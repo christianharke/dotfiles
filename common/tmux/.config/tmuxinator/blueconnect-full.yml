@@ -50,7 +50,7 @@ windows:
         panes:
             - journalctl -f -u container@mongodb.service
             - journalctl -f -u container@devmail.service
-            - tail -f "/run/hinclient/.HIN/HIN Client/hinclient.log"
+            - cd ./larnags/larnags && hinclient headless identities=larndev1 keystore=/home/christian/.accounts/bluecare/hin/larndev1.hin passphrase=/home/christian/.accounts/bluecare/hin/larndev1.passphrase hinclient.httpproxy.port=5026 hinclient.clientapi.port=5027 hinclient.smtpproxy.port=5028 hinclient.pop3proxy.port=5029 hinclient.imapproxy.port=5030 language=de
             - echo "TODO: QuoVadis Stuff"
     - blueconnect:
         layout: main-horizontal
