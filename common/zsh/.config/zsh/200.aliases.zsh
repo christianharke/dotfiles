@@ -18,6 +18,11 @@ alias ls="ls -sh --color='auto'"
 alias lsa="ls -a"
 alias tree="l --tree"
 
+alias cal="khal calendar"
+alias yesterday="khal calendar yesterday 24h"
+alias today="khal calendar today 24h"
+alias tomorrow="khal calendar tomorrow 24h"
+
 alias fa="fontawesome-menu -f icon-list.txt"            # Open Fontawesome icon selector
 alias jshell="nix-shell -p openjdk --command jshell"    # Java REPL
 alias lg="lazygit"                                      # Git CLI UI
